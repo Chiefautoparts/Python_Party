@@ -11,7 +11,5 @@ class products(object):
 		print self.status
 		return self
 	def add_tax():
-
 	def Return():
-
 	def display():
