@@ -8,8 +8,8 @@
 odd_even(1,2000,1)'''
 
 def multipy(a): 
-	for x in range(str(a)):
-		b = a[x] * 5
+	for x in range(a):
+		b = x * 5
 		# b = multipy(a)
 		print b
 
