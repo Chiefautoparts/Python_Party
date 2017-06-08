@@ -7,8 +7,8 @@
 			print "Number is " + str(c) + "." + " This is an odd number."
 odd_even(1,2000,1)'''
 
-def multipy(x, len(x):
-	math = []
-	for x in range(1,(len(x)-1)):
+def multipy(a,5):
+	b = 
+	for x in range(1,:
 		math.push(x*5)
 	print math
