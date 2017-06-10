@@ -7,10 +7,14 @@
 			print "Number is " + str(c) + "." + " This is an odd number."
 odd_even(1,2000,1)'''
 
-def multipy(a): 
-	for x in range(a):
-		b = x * 5
-		# b = multipy(a)
-		print b
 
-multipy([2,4,10,16])
+def multipy(a,b): 
+	for a in xrange(a):
+		c = a[x]*b
+		# b = multipy(a)
+	return c
+multipy([2,4,10,16],5)
+
+
+# a = [2,4,10,16]
+# b = 5
