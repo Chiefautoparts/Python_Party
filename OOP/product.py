@@ -11,13 +11,12 @@ class products(object):
 		print self.status
 		return self
 
-	def add_tax():
-	def Return():
-	def display():
+	# def returns(self):
+	# def display(self):
 
 	def add_tax(self):
 		# self.cost * (1.12)
-		print "Cost after tax is " + self.cost*(1.12)
+		print "Cost after tax is " + self.cost * (1.12)
 		return self
 	'''def returned():
 
