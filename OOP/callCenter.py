@@ -9,3 +9,7 @@ class call(object):
 	def display(self):
 		print self.Idnum,self.name,self.phoneNum,self.time,self.reason
 		return self
+
+class callCenter(object):
+	def __init__(self, call, queue_size):
+		self.call = call
