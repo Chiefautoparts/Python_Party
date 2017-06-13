@@ -13,3 +13,4 @@ class call(object):
 class callCenter(object):
 	def __init__(self, call, queue_size):
 		self.call = call
+		self.queue.size = 
