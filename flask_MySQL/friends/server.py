@@ -13,20 +13,17 @@ def index():
 
 @app.route('/friends', methods=['POST'])
 def create():
-# print request.form['first_name']
-# print request.form['last_name']
-# print request.form['age']
-# return redirect('/')
-# @app.route('/friends', methods=['POST'])
-
-		query = 'INSERT INTO friends (first_name, last_name, age, created_at, updated_at) VALUES (:first_name, :last_name, :age, NOW(), NOW())'
-		data = {
- 			'first_name': request.form['first_name'],
- 			'last_name': request.form['last_name'],
- 			'age': request.form['age']
+	print request.form['first_name']
+	print request.form['last_name']
+	print request.form['age']	
+	query = 'INSERT INTO friends (first_name, last_name, age, created_at, updated_at) VALUES (:first_name, :last_name, :age, NOW(), NOW())'
+	data = {
+		'first_name': request.form['first_name'],
+		'last_name': request.form['last_name'],
+		'age': request.form['age']
  			}
-		mysql.query_db(query, data)
-		return redirect('/')
+	mysql.query_db(query, data)
+	return redirect('/')
 
 app.run(debug=True)
 
