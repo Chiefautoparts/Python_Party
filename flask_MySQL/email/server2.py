@@ -30,7 +30,7 @@ def create():
         'email': request.form['email']
         }
         # flash("Success! Your email is {}".format(request.form['email']))
-    # print request.form['email']
+        # print request.form['email']
     mysql.query_db(query, data)
     return redirect('/')
 app.run(debug=True
