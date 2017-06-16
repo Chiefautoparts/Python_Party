@@ -13,8 +13,8 @@ def index():
     return render_template('index.html', all_email=email)
 @app.route('/validate/<email_id>')
 def show(email_id):
-    query = "SELECT * FROM email WHERE id = :specific_id"
-    data = {'specific_id': email_id}
+    query = "SELECT * FROM email"
+    data = email_id
     friends = mysql.query_db(query, data)
     return render_template('index.html',)
 @app.route('/validate', methods=['POST'])
