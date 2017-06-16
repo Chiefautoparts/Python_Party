@@ -28,6 +28,6 @@ def create():
 # 	if email in users == null:
 # 		print "	NICE TRY THERE BUCKOO. THAT'S NOT A VALID EMAIL"
 # 	else:
-# 		return redirect('/success')
+# 		return redirect('/success')	
 	
 app.run(debug=True)
