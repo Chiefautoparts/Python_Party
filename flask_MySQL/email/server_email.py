@@ -4,7 +4,7 @@ import re
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]=$')
 app = Flask(__name__)
 
-app.secret_key = '123456mysql = MySQLConnector(app, 'mydb')'
+app.secret_key = '123456mysql = MySQLConnector(app, '')'
 
 @app.route('/')
 def index():
