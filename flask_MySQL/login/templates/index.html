@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>login</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>{{ Big }}</h1>
+	<h2>{{ yell }}</h2>
+	
+	<h3>Login</h3>
+	<form action="{{ url_for('login')}}" method='POST'>
+		 <label for="email">Email:<input type="text" name="email" id="email"></label>
+   		 <label for="password">Password:<input type="password" name="password" value=""></label>
+   		 <input type="submit" value="submit">
+	</form>
+	<form action="/register" method="POST">
+		<label>Need to Register?
+		<button type="submit" value="Click Here">Click Here</button></label>
+	</form>
+
+</body>
+</html>
