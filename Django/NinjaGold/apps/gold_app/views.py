@@ -14,5 +14,16 @@ def index(request):
 	except:
 		request.session['Messages'] = []
 
-	if 	
+	if name == 'farm':
+		request.session['Moneys'] += randint(10,20)
+	elif name == 'cave':
+		request.session['Moneys'] += randint(10,30)
+	elif name == 'casino':
+		x = randint(0,1):
+		if x == 0:
+			request.session['Moneys'] -= randint(0,50)
+		elif:
+			request.session['Moneys'] += randint(0,50)
+	else name == 'house':
+		request.session['Moneys'] += randint(0,30)
 	return render(request, 'gold_app/index.html')
