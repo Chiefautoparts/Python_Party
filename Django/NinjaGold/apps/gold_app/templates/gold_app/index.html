@@ -7,16 +7,19 @@
 </head>
 <body>
 	<ul>
+		{% for request in request.session.Moneys %}
+			{{ Messages }}
+		{% endfor %}
 		<li><form action="/index" method="get">Farm
-			<input type="submit" name="index" value="">
+			<input type="submit" name="farm" value="">
 		</form></li>
-		<!-- <li><form action="/cave" method="get">Cave
+		<li><form action="/index" method="get">Cave
 			<input type="submit" name="cave" value="">
 		</form></li>
-		<li><form action="/house" method="get">House
+		<li><form action="/index" method="get">House
 			<input type="submit" name="house" value="">
 		</form></li>
-		<li><form action="/casino" method="get">Casino
+		<li><form action="/index" method="get">Casino
 			<input type="submit" name="casino" value="">
 		</form></li> -->
 	</ul>
