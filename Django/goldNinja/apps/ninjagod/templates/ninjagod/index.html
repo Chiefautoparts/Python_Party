@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>stuff </title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+{% for message in request.session.messages %}
+	{{message}}
+{%endfor%}
+{{request.session.gold}}
+	<form action="/farm" method="post">
+		{% csrf_token %}
+		<input type="submit" name="" value="go to farm">
+		
+	</form>
+</body>
+</html>
