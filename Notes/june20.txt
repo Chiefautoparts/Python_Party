@@ -1,0 +1,4 @@
+NINJA GOLD RAYS WALKTHROUGH
+
+- def test():
+		print 'stuff and things'

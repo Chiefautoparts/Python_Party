@@ -1,0 +1,19 @@
+1. django-admin startproject Name_app
+
+2. cd name_app
+	2.1 mkdir apps
+	2.2 cd apps
+	2.3touch __init__.py
+
+3. django-admin startapp app_name
+	3.1 cd app_name
+	3.2 touch urls.py
+
+4. mkdir templates
+	4.1 cd templates 
+	4.2 mkdir app_name
+	4.3 cd app_name
+	4.4 touch index.html
+
+5. run server python manage.py runserver
+
