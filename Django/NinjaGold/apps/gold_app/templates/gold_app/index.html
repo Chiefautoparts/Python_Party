@@ -8,20 +8,20 @@
 <body>
 	<ul>
 		{% for request in request.session.Moneys %}
-			{{ Messages }}
+			{ Messages }
 		{% endfor %}
-		<li><form action="/index" method="get">Farm
+		<li><form action="/farm" method="get">Farm
 			<input type="submit" name="farm" value="">
 		</form></li>
-		<li><form action="/index" method="get">Cave
+		<li><form action="/cave" method="get">Cave
 			<input type="submit" name="cave" value="">
 		</form></li>
-		<li><form action="/index" method="get">House
+		<li><form action="/house" method="get">House
 			<input type="submit" name="house" value="">
 		</form></li>
-		<li><form action="/index" method="get">Casino
+		<li><form action="/casino" method="get">Casino
 			<input type="submit" name="casino" value="">
-		</form></li> -->
+		</form></li>
 	</ul>
 </body>
 </html>
