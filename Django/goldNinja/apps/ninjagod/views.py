@@ -8,10 +8,10 @@ def index(request):
 		request.session['gold']
 	except:
 		request.session['gold'] = 0
-	
-	try: 
+
+	try:
 		request.session['messages']
-	except: 
+	except:
 		request.session['messages'] = []
 	return render(request, 'ninjagod/index.html')
 
@@ -19,3 +19,8 @@ def farm(request):
 	request.session['gold'] += 10
 	request.session['messages'].append('win')
 	return redirect('/')
+
+def house(request):
+	request.session['gold'] += 20
+	request.session['messages'].append('you hass won this many Moneys: ')
+	return render(request, 'ninjagod/index.html')

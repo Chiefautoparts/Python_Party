@@ -16,14 +16,18 @@ def index(request):
 
 	if name == 'farm':
 		request.session['Moneys'] += randint(10,20)
+		return render(request, 'gold_app/index.html')
 	elif name == 'cave':
 		request.session['Moneys'] += randint(10,30)
+		return render(request, 'gold_app/index.html')
 	elif name == 'casino':
 		x = randint(0,1):
 		if x == 0:
 			request.session['Moneys'] -= randint(0,50)
+			return render(request, 'gold_app/index.html')
 		elif:
 			request.session['Moneys'] += randint(0,50)
+			return render(request, 'gold_app/index.html')
 	else name == 'house':
 		request.session['Moneys'] += randint(0,30)
-	return render(request, 'gold_app/index.html')
+		return render(request, 'gold_app/index.html')
