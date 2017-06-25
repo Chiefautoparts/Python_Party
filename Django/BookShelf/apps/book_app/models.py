@@ -6,8 +6,8 @@ from django.db import models
 class Book(models.Model):
 	title = models.CharField(max_length=100),
 	author = models.CharField(max_length=100),
-	published_date = DateTimeField(auto_now_add=False),
-	category = CharField(max_length=50),
-	created_at = DateTimeField(auto_now_add=True),
-	updated_at = DateTimeField(auto_now=True)
+	published_date = models.TimeField(),
+	category = models.CharField(max_length=50),
+	created_at = models.DateTimeField(auto_now_add=True),
+	updated_at = models.DateTimeField(auto_now=True)
 # Create your models here.
