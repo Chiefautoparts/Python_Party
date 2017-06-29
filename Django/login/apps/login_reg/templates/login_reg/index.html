@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+    </head>
+    <body>
+    <h1>Login</h1>
+     <form action="{% url 'login_reg:login' %}" method="post">
+     	{% csrf_token %}
+      	Username: <input type="text" name="user_name" value=""/>
+      	Password: <input type="text" name="password" value=""/>
+      	<input type="submit" name="submit" value="submit"/>
+      </form>
+      <h1>Register</h1>
+      <form action="{% url 'login_reg:register' %}" method="post">
+      	{% csrf_token %}
+      	Username: <input type="text" name=user_name" value=""/>
+      	Email: <input type="text" name="email" value=""/>
+      	Password: <input type="password" name="password" value=""/>
+      	Confirm Password: <input type="password" name="conf_password" value=""/>
+      	<input type="submit" name="submit" value="submit"/>
+      </form>
+    </body>
+</html>
