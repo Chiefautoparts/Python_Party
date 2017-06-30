@@ -13,9 +13,9 @@ class UserManager(models.Manager):
 		if not re.match(r('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+$')):
 			email['valid'] = False
 		
-	def reg(self, postData):
-		results = {'status':True, 'errors':[], 'user': None}
-		if not postData['username'] or len(postData['username']) < 2:
+	def registervalidate(self, postData):
+		results = {'status': True, 'errors': [], 'user': None}
+		if not postData['userName'] or len(postData['userName']) < 2:
 			results['status'] = False
 			resutls['errors'].append('Username must be more than 2 characters')
 		if not postData['email'] or email['valid'] == False:
@@ -29,14 +29,14 @@ class UserManager(models.Manager):
 			results['errors'].append('Passwords do not match')
 		if results['status'] is False:
 			return results
-		user = User.objects.filter(username=postData['username'])
+		user = User.objects.filter(username=postData['userName'])
 		if user:
 			results['status'] = False
 			results['errors'].append('No account under tha name is found')
 		if results['status']:
 			password = bcrypt.hashpw(postData['password'].encode(), bcrypt.gensalt())
 			user = User.objects.create(
-				username=postData['username'],
+				username=postData['userName'],
 				email=postData['email'],
 				password=password)
 			results['user'] = user
@@ -44,7 +44,7 @@ class UserManager(models.Manager):
 
 	def login(self, postData):
 		results = {'status':True, 'errors':[], 'user': None}
-		user = User.objects.filter(username=postData['username'])
+		user = User.objects.filter(username=postData['userName'])
 		try:
 			user[0]
 		except IndexError:
@@ -62,7 +62,7 @@ class UserManager(models.Manager):
 		return results
 
 class User(models.Model):
-	username = models.CharField(max_length=100)
+	userName = models.CharField(max_length=100)
 	email = models.CharField(max_length=100)
 	password =models.CharField(max_length=100)
 	conf_password = models.CharField(max_length=100)
@@ -70,5 +70,5 @@ class User(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 	
 	def __str__(self):
-		return str(self.id) + ', ' + self.username
+		return str(self.id) + ', ' + self.userName
 	objects = UserManager()
