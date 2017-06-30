@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User validation</title>
+  </head>
+  <body>
+    <form action="/user" method="post">
+      {% csrf_token %}
+      Username<input type="text" name="name" value="">
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>

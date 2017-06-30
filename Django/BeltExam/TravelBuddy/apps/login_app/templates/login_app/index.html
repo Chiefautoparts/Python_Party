@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="/travel" method="post" name="log">
+      {% csrf_token %} 
+      Username:<input type="text" name="username" value="">
+      Password:<input type="password" name="password" value="">
+      <input type="submit" name="submit" value="" placeholder="Login">
+    </form>
+    <h1>Register</h1>
+    <form action="/travel" method="post" name="reg">
+      {% csrf_token %}
+      Name:<input type="text" name="name" value="">
+      Username:<input type="text" name="username" value="">
+      Password:<input type="password" name="password" value="">
+      Confirm password:<input type="password" name="confirm_password" value="">
+      <input type="submit" name="submit" value="" placeholder="Register">
+    </form>
+  </body>
+</html>
